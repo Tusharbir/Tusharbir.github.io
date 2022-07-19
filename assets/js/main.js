@@ -114,6 +114,14 @@
     }
   }, true)
 
+
+  let preloader = select('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove()
+    });
+  }
+
   /**
    * Scroll with ofset on page load with hash links in the url
    */
@@ -137,7 +145,7 @@
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 1000
     });
   }
 
